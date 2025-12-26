@@ -1,0 +1,138 @@
+# HR Analytics: Employee Attrition Analysis  
+## Project Report
+
+**Dataset Source**: IBM HR Analytics Employee Attrition Dataset  
+**Kaggle Link**: https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset  
+**Reference Analysis**: https://github.com/Abhijeetmishra1924/HR-Analytics-ibm-data/blob/main/hr_analysis.ipynb  
+
+**Date**: December 26, 2025  
+
+---
+
+### Executive Summary
+This report presents an in-depth exploratory data analysis (EDA) of the IBM HR Analytics Employee Attrition dataset, containing records of 1,470 employees across 35 attributes. The overall attrition rate stands at **16.12%** (237 employees).  
+
+Key findings reveal that attrition is significantly higher among employees who work overtime, travel frequently, have low job/environment/work-life satisfaction, are single, younger (under 30), in entry-level roles, or work in Sales and Human Resources departments. Roles such as Sales Representative (41% attrition) and Laboratory Technician (24%) are particularly affected.  
+
+Targeted interventions in work-life balance, overtime reduction, satisfaction improvement, and retention programs for high-risk groups can substantially reduce turnover and associated costs.
+
+---
+
+### Introduction
+
+#### Background
+Employee attrition poses significant challenges to organizations, including knowledge loss, recruitment expenses, and reduced productivity. Understanding the underlying factors enables HR teams to implement proactive retention strategies.
+
+#### Objectives
+- Explore employee demographics, job characteristics, and satisfaction levels.
+- Identify the primary drivers of voluntary attrition.
+- Provide actionable insights and recommendations for reducing turnover.
+
+The analysis follows standard EDA practices and draws inspiration from the referenced GitHub notebook.
+
+---
+
+### Data Description
+The dataset consists of **1,470 rows** (employees) and **35 columns**, with no missing values or duplicates.
+
+#### Key Attributes
+| Column                  | Type       | Description                                                                 |
+|-------------------------|------------|-----------------------------------------------------------------------------|
+| Age                     | Numerical  | 18–60 years                                                                |
+| Attrition               | Categorical| Yes/No                                                                     |
+| BusinessTravel          | Categorical| Non-Travel, Travel_Rarely, Travel_Frequently                               |
+| Department              | Categorical| Sales, Research & Development, Human Resources                             |
+| DistanceFromHome        | Numerical  | Miles from home (1–29)                                                     |
+| Education               | Ordinal    | 1 (Below College) to 5 (Doctor)                                            |
+| EnvironmentSatisfaction | Ordinal    | 1 (Low) to 4 (Very High)                                                   |
+| JobRole                 | Categorical| Sales Executive, Research Scientist, Laboratory Technician, etc.           |
+| JobSatisfaction         | Ordinal    | 1 (Low) to 4 (Very High)                                                   |
+| MaritalStatus           | Categorical| Single, Married, Divorced                                                  |
+| MonthlyIncome           | Numerical  | $1,009–$19,999                                                             |
+| OverTime                | Categorical| Yes/No                                                                     |
+| WorkLifeBalance         | Ordinal    | 1 (Bad) to 4 (Best)                                                        |
+| YearsAtCompany          | Numerical  | Tenure in years                                                            |
+
+---
+
+### Methodology
+1. Data loading and cleaning using pandas.
+2. Descriptive statistics and distribution analysis.
+3. Visualization of attrition patterns (bar charts, histograms, heatmaps).
+4. Group-wise attrition rate calculations.
+5. Insight extraction focusing on variables showing large differences in attrition.
+
+No predictive modeling was performed; emphasis placed on interpretable insights.
+
+---
+
+### Key Findings
+
+#### Overall Attrition Rate
+**16.12%** (237 out of 1,470 employees).
+
+#### Top Drivers of Attrition
+- **OverTime**: 30% attrition (Yes) vs. 8% (No).
+- **Business Travel**: 25% (Frequent) vs. 8% (Non-Travel).
+- **Marital Status**: 25% (Single) vs. 12% (Married) vs. 10% (Divorced).
+- **Age**: ~25% for employees under 30 vs. ~6% for over 50.
+- **Job Role**: Highest in Sales Representative (41%), Laboratory Technician (24%), Human Resources (19%).
+- **Department**: Sales (21%), Human Resources (19%), Research & Development (14%).
+- **Monthly Income**: Leavers average $4,780 vs. $6,830 for stayers; 25% attrition below $5,000.
+- Satisfaction metrics (Job, Environment, Work-Life, Relationship) consistently show 20–25% attrition at low levels vs. 9–13% at high levels.
+
+---
+
+### Top 10 Questions Answered by This Analysis
+
+1. **What is the overall attrition rate?**  
+   16.12%.
+
+2. **Which age group has the highest attrition?**  
+   Employees under 30 years (~25%).
+
+3. **Does marital status affect turnover?**  
+   Yes—Single employees have 25% attrition.
+
+4. **Is overtime a major factor?**  
+   Yes—30% attrition for overtime workers vs. 8% without.
+
+5. **Which job roles have the highest attrition?**  
+   Sales Representative (41%), Laboratory Technician (24%), HR roles (19%).
+
+6. **How does business travel impact attrition?**  
+   Frequent travelers: 25% attrition.
+
+7. **Is job satisfaction linked to turnover?**  
+   Yes—Low satisfaction: 22% attrition.
+
+8. **Are there departmental differences?**  
+   Yes—Sales (21%) highest, R&D lowest (14%).
+
+9. **How does income relate to attrition?**  
+   Lower-paid employees (<$5,000/month) show 25% attrition.
+
+10. **What role does work-life balance play?**  
+    Poor balance: 25% attrition vs. 9% for best balance.
+
+---
+
+### Conclusion
+Attrition is driven by a mix of workload (overtime, travel), compensation, satisfaction levels, and demographic factors. High-risk profiles include young, single employees in sales/technical roles working overtime with low satisfaction. Addressing these factors offers the greatest opportunity to reduce turnover.
+
+---
+
+### Recommendations
+1. **Limit overtime** and promote flexible scheduling.
+2. **Improve work-life balance** through policies and monitoring.
+3. **Enhance satisfaction** via regular surveys, feedback loops, and recognition programs.
+4. **Targeted retention** for Sales Representatives, Laboratory Technicians, and entry-level staff (mentorship, career paths, competitive pay).
+5. **Reduce travel burden** with remote options or allowances.
+6. **Focus compensation reviews** on lower-income and high-risk groups.
+
+Implementing these measures can meaningfully lower the 16.12% attrition rate and improve organizational stability.
+
+---
+
+**Prepared by**: ABHIJEET MISHRA 
+**Based on**: IBM HR Analytics Dataset & Referenced EDA Notebook
