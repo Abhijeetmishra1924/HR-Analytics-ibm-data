@@ -82,5 +82,4 @@ The dataset used is the **IBM HR Analytics Employee Attrition & Performance** da
 
 ---
 
-## 📁 Repository Structure
 
